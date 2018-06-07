@@ -97,7 +97,7 @@ class App extends Component {
             inputComponent={SelectWrapped}
             value={this.state.selectedName}
             onChange={this.handleSuggestionChange}
-            placeholder="Search a country (start with a)"
+            placeholder="Start typing to filter through addresses ..."
             id="react-select-single"
             inputProps={{
               style: { width: '300px' },
