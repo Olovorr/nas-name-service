@@ -5,5 +5,8 @@
   "author": "Oliver Rýdzi",
   "license": "MIT",
   "repository": "Olovorr/nas-name-service",
-  "main": "index.js"
+  "main": "index.js",
+  "dependencies": {
+    "nebpay": "https://github.com/nebulasio/nebPay/"
+  }
 }
