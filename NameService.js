@@ -16,6 +16,10 @@ class NameService {
   registerAddress(walletInfo) {
     const transactionFrom = Blockchain.transaction.from;
     const parsedWalletInfo = JSON.parse(walletInfo);
+    // Practically only restriction in the entire SC - if present, displayName must be unique
+    if (parsedWalletInfo.displayName) {
+      this.checkIfUnique(parsedWalletInfo.displayName);
+    }
     // In case some data were already stored for this address
     const previousData = this.addressInfoByAddress.get(transactionFrom) || {}
     // If there is entry for previous data, update data for this id, don't create new entry
@@ -83,6 +87,15 @@ class NameService {
     }
     return filteredAddresses;
   }
+  checkIfUnique(displayName) {
+    for(var i=0; i < this.addressCount; i++){
+      if (this.addressInfoById.get(i + 1).displayName == displayName) {
+        throw new Error("Display name must be unique!");
+      }
+    }
+    return true;
+  }
+
 }
 
 module.exports = NameService;
