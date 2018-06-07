@@ -16,7 +16,7 @@ export default class Option extends Component {
         onClick={this.handleClick}
         component="div"
         style={{
-          fontWeight: isSelected ? 500 : 400,
+          fontWeight: isSelected ? 700 : 400,
         }}
       >
         {children}
