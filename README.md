@@ -36,11 +36,11 @@ After installing it, just include function you need via require or import, i.e.:
 ```import { getAddressInfo } from 'nas-name-service'```
 and then use it in your code.
 
-### Table of Contents:
-- [Get address Info](#getAddressInfo)
-- [Get All Registered Addresses](#getAllAddresses)
-- [Register new Address](#registerAddress)
-- [Filter addresses by property](#filterAddressesByProperty)
+#### Table of Contents:
+- [Get address Info](#getaddressinfo)
+- [Get All Registered Addresses](#getalladdresses)
+- [Register new Address](#registeraddress)
+- [Filter addresses by property](#filteraddressesbyproperty)
 
 
 
