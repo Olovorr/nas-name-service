@@ -4,7 +4,7 @@
   "description": "Name service for Nebulas applications",
   "author": "Oliver Rýdzi",
   "license": "MIT",
-  "repository": "Olovorr/nas-name-service",
+  "repository": "https://github.com/Olovorr/nas-name-service/",
   "main": "index.js",
   "dependencies": {
     "nebpay": "https://github.com/nebulasio/nebPay/"

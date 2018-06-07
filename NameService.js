@@ -17,8 +17,8 @@ class NameService {
     const transactionFrom = Blockchain.transaction.from;
     const parsedWalletInfo = JSON.parse(walletInfo);
     // Practically only restriction in the entire SC - if present, displayName must be unique
-    if (parsedWalletInfo.displayName) {
-      this.checkIfUnique(parsedWalletInfo.displayName);
+    if (parsedWalletInfo.displayName && !this.checkIfUnique(parsedWalletInfo.displayName)) {
+      throw new Error("Display name must be unique!");
     }
     // In case some data were already stored for this address
     const previousData = this.addressInfoByAddress.get(transactionFrom) || {}
@@ -90,7 +90,7 @@ class NameService {
   checkIfUnique(displayName) {
     for(var i=0; i < this.addressCount; i++){
       if (this.addressInfoById.get(i + 1).displayName == displayName) {
-        throw new Error("Display name must be unique!");
+        return false;
       }
     }
     return true;
