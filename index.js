@@ -1,4 +1,6 @@
-const SMART_CONTRACT_ADDRESS = 'n1j98gJf6PyXuyJ1t5oacsr7V3TTJMuYn8Y';
+const SMART_CONTRACT_ADDRESS = 'n224j44qamJaEY5VBcG7JPtSZXVA9LduDnS';
+// const SMART_CONTRACT_TESTNET = 'n1rizZanurqhpWZZaZVeCAyadMM4TEbGN4G';
+
 const getAddressInfo = function(walletAddress) {
   const body = { 
     from: 'n1ytsHPBkJ4Zthjhe12QTEdrKFqLZ9DrbNt',
@@ -16,7 +18,7 @@ const getAddressInfo = function(walletAddress) {
       )
     },
   }
-  return fetch("https://testnet.nebulas.io/v1/user/call", {
+  return fetch("https://mainnet.nebulas.io/v1/user/call", {
     headers: {},
     referrerPolicy: 'no-referrer-when-downgrade',
     body: JSON.stringify(body),
@@ -51,7 +53,7 @@ const getAllAddresses = function() {
       args: "[]"
     },
   }
-  return fetch("https://testnet.nebulas.io/v1/user/call", {
+  return fetch("https://mainnet.nebulas.io/v1/user/call", {
     headers: {},
     referrerPolicy: 'no-referrer-when-downgrade',
     body: JSON.stringify(body),
@@ -80,7 +82,7 @@ const filterAddressesByProperty = function(filterProperty, searchTerm) {
       )
     },
   }
-  return fetch("https://testnet.nebulas.io/v1/user/call", {
+  return fetch("https://mainnet.nebulas.io/v1/user/call", {
     headers: {},
     referrerPolicy: 'no-referrer-when-downgrade',
     body: JSON.stringify(body),
