@@ -1,6 +1,6 @@
 {
   "name": "nas-name-service",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Name service for Nebulas applications",
   "author": "Oliver Rýdzi",
   "license": "MIT",

@@ -5,7 +5,7 @@
   "dependencies": {
     "@material-ui/core": "1.2.0",
     "@material-ui/icons": "1.1.0",
-    "nas-name-service": "0.1.0",
+    "nas-name-service": "0.1.1",
     "nebpay": "https://github.com/nebulasio/nebPay/",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",

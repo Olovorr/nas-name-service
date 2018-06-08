@@ -36,7 +36,9 @@ const registerAddress = function(data) {
     SMART_CONTRACT_ADDRESS, // contract address
     0, // amount of NAS to be send
     'registerAddress', // function to be called
-    JSON.stringify([ JSON.stringify(data) ]), // args
+    JSON.stringify([
+      JSON.stringify(data)
+    ]) // args
   )
 }
 

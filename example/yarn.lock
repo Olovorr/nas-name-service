@@ -4755,9 +4755,9 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-nas-name-service@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/nas-name-service/-/nas-name-service-0.1.0.tgz#1251746a669154d28be2d7ddded91692343d01a8"
+nas-name-service@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/nas-name-service/-/nas-name-service-0.1.1.tgz#b99fc09be06b35e3777d1ebdbeb7e4c99ede4a87"
   dependencies:
     nebpay "https://github.com/nebulasio/nebPay/"
 
@@ -4767,7 +4767,6 @@ natural-compare@^1.4.0:
 
 "nebpay@git+https://github.com/nebulasio/nebPay.git":
   version "0.1.0"
-  uid "8946705b6e4c44710999c4116a50f46aad5d9f9e"
   resolved "git+https://github.com/nebulasio/nebPay.git#8946705b6e4c44710999c4116a50f46aad5d9f9e"
   dependencies:
     bignumber.js "^5.0.0"
