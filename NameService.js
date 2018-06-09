@@ -82,17 +82,20 @@ class NameService {
     var filteredAddresses = []
     for(var i=0; i < this.addressCount; i++){
       const addressInfo = this.addressInfoById.get(i + 1);
-      const checkedString = addressInfo[filterProperty] && addressInfo[filterProperty].toLowerCase();
+      if (addressInfo) {
+        const checkedString = addressInfo[filterProperty] && addressInfo[filterProperty].toLowerCase();
 
-      if (checkedString && searchTermRegexp.test(checkedString)) {
-        filteredAddresses.push(addressInfo);
+        if (checkedString && searchTermRegexp.test(checkedString)) {
+          filteredAddresses.push(addressInfo);
+        }
       }
     }
     return filteredAddresses;
   }
   checkIfUnique(displayName) {
     for(var i=0; i < this.addressCount; i++){
-      if (this.addressInfoById.get(i + 1).displayName == displayName) {
+      const addressInfo = this.addressInfoById.get(i + 1);
+      if (addressInfo && addressInfo.displayName == displayName) {
         return false;
       }
     }
