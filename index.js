@@ -1,5 +1,5 @@
-const SMART_CONTRACT_ADDRESS = 'n1iX5HwpkUEKsGyXLdLwnaWorEsMHZj9HnV';
-// const SMART_CONTRACT_TESTNET = 'n1rizZanurqhpWZZaZVeCAyadMM4TEbGN4G';
+const SMART_CONTRACT_ADDRESS = 'n1thKSZDtpsBSJKE87v1C8GKCSRyggqew8a';
+// const SMART_CONTRACT_TESTNET = 'n1fpCRtMFHYUH7Y9wKsWmr4N9EPi7b7WLbp';
 
 const getAddressInfo = function(walletAddress) {
   const body = { 
