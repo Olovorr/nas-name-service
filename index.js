@@ -1,4 +1,4 @@
-const SMART_CONTRACT_ADDRESS = 'n224j44qamJaEY5VBcG7JPtSZXVA9LduDnS';
+const SMART_CONTRACT_ADDRESS = 'n1iX5HwpkUEKsGyXLdLwnaWorEsMHZj9HnV';
 // const SMART_CONTRACT_TESTNET = 'n1rizZanurqhpWZZaZVeCAyadMM4TEbGN4G';
 
 const getAddressInfo = function(walletAddress) {
@@ -42,6 +42,18 @@ const registerAddress = function(data) {
   )
 }
 
+const deleteAddress = function(data) {
+  const nebPay = new NebPay()
+  return nebPay.call(
+    SMART_CONTRACT_ADDRESS, // contract address
+    0, // amount of NAS to be send
+    'deleteAddress', // function to be called
+    JSON.stringify([
+      JSON.stringify(data)
+    ]) // args
+  )
+}
+
 const getAllAddresses = function() {
   const body = {
     from: 'n1ytsHPBkJ4Zthjhe12QTEdrKFqLZ9DrbNt',
@@ -75,7 +87,7 @@ const filterAddressesByProperty = function(filterProperty, searchTerm) {
     gasPrice: '1000000',
     gasLimit: '200000',
     contract: {
-      function: 'getAllAddresses',
+      function: 'filterAddressesByProperty',
       args: JSON.stringify(
         [
           filterProperty,

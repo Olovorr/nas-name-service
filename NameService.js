@@ -63,11 +63,14 @@ class NameService {
 
   // For autosuggesting purposes, returns all registered addresses
   getAllAddresses() {
-    var addressInfo = []
+    var addressInfoArray = []
     for(var i=0; i < this.addressCount; i++){
-      addressInfo.push(this.addressInfoById.get(i + 1))
+      const addressInfo = this.addressInfoById.get(i + 1);
+      if (addressInfo) {
+        addressInfoArray.push(addressInfo);
+      }
     }
-    return addressInfo
+    return addressInfoArray;
   }
 
   // For backend filtering
@@ -79,7 +82,7 @@ class NameService {
     var filteredAddresses = []
     for(var i=0; i < this.addressCount; i++){
       const addressInfo = this.addressInfoById.get(i + 1);
-      const checkedString = addressInfo[filterProperty] && checkedString.toLowerCase();
+      const checkedString = addressInfo[filterProperty] && addressInfo[filterProperty].toLowerCase();
 
       if (checkedString && searchTermRegexp.test(checkedString)) {
         filteredAddresses.push(addressInfo);
@@ -94,6 +97,17 @@ class NameService {
       }
     }
     return true;
+  }
+
+  deleteAddress() {
+    const walletAddress = Blockchain.transaction.from;
+    const addressInfo = this.addressInfoByAddress.get(walletAddress);
+    if (addressInfo) {
+      this.addressInfoById.set(addressInfo.id, null);
+      this.addressInfoByAddress.set(walletAddress, null);
+      return true;
+    }
+    return false;
   }
 
 }
