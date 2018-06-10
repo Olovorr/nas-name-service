@@ -41,7 +41,7 @@ and then use it in your code.
 - [Get All Registered Addresses](#getalladdresses)
 - [Register new Address](#registeraddress)
 - [Filter addresses by property](#filteraddressesbyproperty)
-
+- [Delete address from NS](#deleteaddress)
 
 
 ***
