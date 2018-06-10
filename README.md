@@ -183,3 +183,26 @@ filterAddressesByProperty("displayName", "Ol")
         })
     })
 ```
+
+
+***
+
+### deleteAddress
+
+```
+deleteAddress()
+```
+
+###### parameters：
+
+none
+
+###### return
+
+- `string` - txhash of transaction
+
+##### Example
+
+```
+    deleteAddress() // After importing it from the package, it prompts user to do the transaction
+```
